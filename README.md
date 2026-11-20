@@ -163,6 +163,14 @@ A green first run prints every step, then the summary (the starter feature of `n
 
 From there, copy the features of [`tests/features/`](tests/features/) (they also ship in the package, under `node_modules/@webship-js/docusaurus-steps/tests/features/`): together they use every step of the pack. Each carries the tag of the site it runs on: `@test-site` (the test site, from either way of step 1) or `@template` (the site `create-docusaurus` makes, as it makes it). Run the ones of your site with `--tags`, for example `npx cucumber-js --tags @test-site`. They read no file of their own.
 
+In the Webship Workspace, the workspace's own testing command does steps 2 to 5 in the project of the site, and runs the suite in the project's container: it adds webship-js, this pack, the tags that leave out the features of the other kind of site, and a first feature; `--examples` copies the features of this pack into the project.
+
+```bash
+bash dev/cmd-tools-testing.sh dcws
+bash dev/cmd-tools-testing.sh dcws --examples docusaurus
+bash dev/cmd-tools-testing.sh dcws --run
+```
+
 ### What the suite tests
 
 The features of this repository run every step of the pack, twice in a row in CI on every change, then the assertions that must fail:
