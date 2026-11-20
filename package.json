@@ -1,0 +1,65 @@
+{
+  "name": "@webship-js/docusaurus-steps",
+  "version": "2.0.0",
+  "description": "Cucumber step definitions for documentation sites built with Docusaurus, a plugin for webship-js (Playwright and Cucumber): hydration and the production build, pages opened in the same document, the navbar with its menus, the version and language menus and the navigation menu of a narrow screen, the docs sidebar and its categories, the table of contents that follows the scroll, the next and previous pages, the breadcrumbs, the version banner, the edit link and the heading anchors, the colour mode and the announcement bar the browser remembers, the local search, the blog with its tags, archive, feeds and pages, tabs synced and remembered, admonitions and code blocks with their copy button, each step waiting on the site's own signals, never on a clock.",
+  "main": "tests/step-definitions/docusaurus-helpers.js",
+  "files": [
+    "tests/step-definitions/",
+    "tests/features/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "cucumber-js --config cucumber.js",
+    "test:dry": "cucumber-js --config cucumber.js --dry-run",
+    "test:examples": "node tests/check-examples.js",
+    "test:paths": "node tests/check-paths.js",
+    "test:must-fail": "node tests/check-must-fail.js",
+    "test:chromium": "BROWSER=chromium cucumber-js --config cucumber.js",
+    "test:firefox": "BROWSER=firefox cucumber-js --config cucumber.js",
+    "test:webkit": "BROWSER=webkit cucumber-js --config cucumber.js",
+    "test:headed": "HEADLESS=false cucumber-js --config cucumber.js",
+    "generate-reports": "generate-reports",
+    "test:fast": "SLOW_MO=0 cucumber-js --config cucumber.js"
+  },
+  "keywords": [
+    "webship-js",
+    "docusaurus",
+    "documentation",
+    "docs",
+    "hydration",
+    "cucumber",
+    "cucumber-js",
+    "playwright",
+    "bdd",
+    "testing",
+    "e2e",
+    "gherkin"
+  ],
+  "author": "Webship.co",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webship/docusaurus-steps.git"
+  },
+  "bugs": {
+    "url": "https://github.com/webship/docusaurus-steps/issues"
+  },
+  "homepage": "https://github.com/webship/docusaurus-steps#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">= 20.0"
+  },
+  "peerDependencies": {
+    "webship-js": "^2.0.16"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.0",
+    "webship-js": "^2.0.16"
+  },
+  "overrides": {
+    "@cucumber/cucumber": "^12"
+  }
+}
