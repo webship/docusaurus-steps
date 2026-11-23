@@ -41,7 +41,7 @@ must fail; see [`.github/workflows/test.yml`](.github/workflows/test.yml).
 
 ## From nothing to a green run
 
-What the machine needs: Docker, [DDEV](https://ddev.com), git, python3, and Node.js 20 or later with npm. The site and its Node.js 24 run in DDEV's containers.
+What the machine needs: Docker, [DDEV](https://ddev.com), git, python3, and Node.js 24 or later with npm. The site and its Node.js 24 run in DDEV's containers.
 
 **1. The site.** The pack's own build script (the one CI runs) makes the site in a DDEV project of type `generic`: `create-docusaurus` makes a site of the classic template in TypeScript, on 3.10.2, then [`site/test-site.cjs`](site/test-site.cjs) gives it the test content of this pack (docs with tabs, admonitions and code blocks in three versions, a French locale, a blog, an announcement bar, a menu in the navbar and a search that runs in the browser), then the site is built for production and served by the web container. It takes about two minutes.
 
@@ -190,7 +190,7 @@ Not tested: the framework's own tests (it has its own); the development server b
 
 ## Requirements
 
-- Node.js 20 or later
+- Node.js 24 or later
 - A webship-js 2.0 test project (webship-js 2.0.16 or later)
 - A site of the 3.x line with the classic theme (proven on 3.10.2), served as a production build (`build`, then `serve` or any web server); for the search steps, the local search plugin [`@easyops-cn/docusaurus-search-local`](https://github.com/easyops-cn/docusaurus-search-local) (MIT)
 
