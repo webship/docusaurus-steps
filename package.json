@@ -1,6 +1,6 @@
 {
   "name": "@webship-js/docusaurus-steps",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Cucumber step definitions for documentation sites built with Docusaurus, a plugin for webship-js (Playwright and Cucumber): hydration and the production build, pages opened in the same document, the navbar with its menus, the version and language menus and the navigation menu of a narrow screen, the docs sidebar and its categories, the table of contents that follows the scroll, the next and previous pages, the breadcrumbs, the version banner, the edit link and the heading anchors, the colour mode and the announcement bar the browser remembers, the local search, the blog with its tags, archive, feeds and pages, tabs synced and remembered, admonitions and code blocks with their copy button, each step waiting on the site's own signals, never on a clock.",
   "main": "tests/step-definitions/docusaurus-helpers.js",
   "files": [
